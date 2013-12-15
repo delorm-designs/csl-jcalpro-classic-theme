@@ -1,0 +1,859 @@
+/**
+ * @version		$Id: default.css 772 2012-04-17 19:21:09Z jeffchannell $
+ * @package		JCalPro
+ * @subpackage	jcaltheme_ocean
+
+**********************************************
+JCal Pro
+Copyright (c) 2006-2012 Anything-Digital.com
+**********************************************
+JCalPro is a native Joomla! calendar component for Joomla!
+
+JCal Pro was once a fork of the existing Extcalendar component for Joomla!
+(com_extcal_0_9_2_RC4.zip from mamboguru.com).
+Extcal (http://sourceforge.net/projects/extcal) was renamed
+and adapted to become a Mambo/Joomla! component by
+Matthew Friedman, and further modified by David McKinnis
+(mamboguru.com) to repair some security holes.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This header must not be removed. Additional contributions/changes
+may be added to this header as long as no information is deleted.
+**********************************************
+Get the latest version of JCal Pro at:
+http://anything-digital.com/
+**********************************************
+
+ */
+
+#jcl_component table, #jcl_component tr, #jcl_component td {
+        padding: 0px;
+}
+
+
+/* Toolbar */
+#jcl_component .jcl_toolbar {
+  background-image: url("../images/tile_back.gif");
+  background-position: center top;
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #CED2D6;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  color: #606F79;
+  font-size: 11px;
+  height: 35px;
+  padding: 8px 10px 8px 8px;
+}
+
+#jcl_component .jcl_toolbar_catselect {
+	padding: 4px 0px 6px 0px;
+}
+
+#jcl_component .jcl_toolbar_catselect .listbox {
+  background-color: #EFEFEF;
+  font-size: 12px;
+  height: 26px;
+  margin: 6px 0;
+}
+
+
+/* Toolbar Buttons */
+#jcl_component .jcl_toolbar_button,
+#jcl_component .jcl_toolbar_button:link,
+#jcl_component .jcl_toolbar_button:visited,
+#jcl_component .jcl_toolbar_button:hover,
+#jcl_component .jcl_toolbar_button:active {
+	padding-top: 20px;
+	font-size: 9px;
+        font-weight: bold;
+        margin: 0 2px;
+	display: inline-block;
+	color: #606F79;
+        line-height: 2.5;
+}
+#jcl_component .jcl_toolbar_button:hover {
+	color: #8090A3;
+}
+
+#jcl_component .jcl_toolbar_button_month,
+#jcl_component .jcl_toolbar_button_month:link,
+#jcl_component .jcl_toolbar_button_month:visited,
+#jcl_component .jcl_toolbar_button_month:hover,
+#jcl_component .jcl_toolbar_button_month:active {
+	background: transparent url(../images/icon-month.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_flat,
+#jcl_component .jcl_toolbar_button_flat:link,
+#jcl_component .jcl_toolbar_button_flat:visited,
+#jcl_component .jcl_toolbar_button_flat:hover,
+#jcl_component .jcl_toolbar_button_flat:active {
+	background: transparent url(../images/icon-flat.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_week,
+#jcl_component .jcl_toolbar_button_week:link,
+#jcl_component .jcl_toolbar_button_week:visited,
+#jcl_component .jcl_toolbar_button_week:hover,
+#jcl_component .jcl_toolbar_button_week:active {
+	background: transparent url(../images/icon-week.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_day,
+#jcl_component .jcl_toolbar_button_day:link,
+#jcl_component .jcl_toolbar_button_day:visited,
+#jcl_component .jcl_toolbar_button_day:hover,
+#jcl_component .jcl_toolbar_button_day:active {
+	background: transparent url(../images/icon-day.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_categories,
+#jcl_component .jcl_toolbar_button_categories:link,
+#jcl_component .jcl_toolbar_button_categories:visited,
+#jcl_component .jcl_toolbar_button_categories:hover,
+#jcl_component .jcl_toolbar_button_categories:active {
+	background: transparent url(../images/icon-categories.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_search,
+#jcl_component .jcl_toolbar_button_search:link,
+#jcl_component .jcl_toolbar_button_search:visited,
+#jcl_component .jcl_toolbar_button_search:hover,
+#jcl_component .jcl_toolbar_button_search:active {
+	background: transparent url(../images/icon-search.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_ical,
+#jcl_component .jcl_toolbar_button_ical:link,
+#jcl_component .jcl_toolbar_button_ical:visited,
+#jcl_component .jcl_toolbar_button_ical:hover,
+#jcl_component .jcl_toolbar_button_ical:active {
+	background: transparent url(../images/icon-ical.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_print,
+#jcl_component .jcl_toolbar_button_print:link,
+#jcl_component .jcl_toolbar_button_print:visited,
+#jcl_component .jcl_toolbar_button_print:hover,
+#jcl_component .jcl_toolbar_button_print:active {
+	background: transparent url(../images/icon-print.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_add,
+#jcl_component .jcl_toolbar_button_add:link,
+#jcl_component .jcl_toolbar_button_add:visited,
+#jcl_component .jcl_toolbar_button_add:hover,
+#jcl_component .jcl_toolbar_button_add:active {
+	background: transparent url(../images/icon-add.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_register,
+#jcl_component .jcl_toolbar_button_register:link,
+#jcl_component .jcl_toolbar_button_register:visited,
+#jcl_component .jcl_toolbar_button_register:hover,
+#jcl_component .jcl_toolbar_button_register:active {
+	background: transparent url(../images/icon-register.gif) no-repeat center top;
+}
+
+/* common navigation */
+#jcl_component .jcl_navbar {
+	height: 28px;
+        margin-right: 1px;
+        font-weight: bold;
+	line-height: 28px;
+        text-align: center;
+	text-decoration: none;
+        background-color: #D8E0E4;
+}
+
+#jcl_component .jcl_previous,
+#jcl_component .jcl_next {
+        background-color: #D8E0E4;
+        bborder-left: 1px solid #FFFFFF;
+        bborder-top: 1px solid #FFFFFF;
+        font-size: 10px;
+        font-weight: bold;
+        ppadding: 0px 10px;
+        text-align: center;
+        text-decoration: none;
+}
+
+#jcl_component .jcl_current {
+	wwidth: 34%;
+        color: #606F79;
+        font-size: 10px; //12px?
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+        background-color: #D0E6F6;
+        border-left: 1px solid #FFFFFF;
+        border-right: 1px solid #FFFFFF;
+}
+
+
+#jcl_component .jcl_previous a,
+#jcl_component .jcl_previous a:link,
+#jcl_component .jcl_previous a:visited,
+#jcl_component .jcl_previous a:hover,
+#jcl_component .jcl_previous a:active {
+	background: url(../images/mini_arrowleft.gif) no-repeat left center;
+	padding-left: 20px;
+}
+
+#jcl_component .jcl_next a,
+#jcl_component .jcl_next a:link,
+#jcl_component .jcl_next a:visited,
+#jcl_component .jcl_next a:hover,
+#jcl_component .jcl_next a:active {
+	background: url(../images/mini_arrowright.gif) no-repeat right center;
+	padding-right: 20px;
+}
+
+#jcl_component .jcl_next a,
+#jcl_component .jcl_previous a {
+  color: #606F79;
+  text-decoration: none;
+}
+
+#jcl_component .jcl_previous a:hover,
+#jcl_component .jcl_next a:hover {
+	color: #8090A3;
+	text-decoration: underline;
+}
+
+#jcl_component .jcl_month_row > tbody > tr > td {
+    	border-bottom: 1px solid #FFFFFF;
+}
+
+#jcl_component td.jcl_month_week_number {
+    	border-color: #95A5AD;
+}
+
+#jcl_component .jcl_month_week_number {
+	text-decoration: none;
+	font-weight: bold;
+        background-color: #708088;
+	margin: 0px;
+        padding: 0px;
+        color: #E0E4E4;
+	font-size: 9px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+#jcl_component .jcl_month_week_number {
+	color: #000000;
+    border-color: #95A5AD !important;
+}
+
+#jcl_component .jcl_month_week_number a {
+	color: #E0E4E4;
+	text-decoration: none;
+}
+
+#jcl_component .jcl_month_week_number a:hover {
+	color: #E0E4E4;
+	text-decoration: underline;
+}
+
+#jcl_component .jcl_month_cell_number {
+	text-align: right;
+	font-weight: bold;
+	color: #000000;
+	width: 1.5em;
+	padding-top: 2px;
+}
+
+#jcl_component .jcl_month_add {
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+#jcl_component .jcl_row {
+        margin: 2px;
+        color: black;
+        font-size: 11px;
+        text-align: left;
+        line-height: 16px;
+        background-color: #E4E8E8;
+}
+
+#jcl_component .jcl_message {
+        text-align: left;
+}
+
+#jcl_component .jcl_event_body {
+	border-width: 0 0 0 12px;
+	border-style:solid;
+	padding-top: 6px;
+	padding-right: 11px;
+	padding-bottom: 6px;
+	padding-left: 11px;
+	line-height: 16px;
+	text-align: left;
+}
+
+#jcl_component .jcl_empty {
+	border-width: 0;
+}
+
+#jcl_component .jcl_event_body h3 {
+	margin: 0px;
+}
+
+#jcl_component .jcl_event_body h3 a {
+ 	color: #606F79;
+	font-size: 10px;
+	font-weight: bold;
+    text-decoration: none;
+	font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .jcl_event_description {
+	padding: 10px 0 20px;
+}
+
+#jcl_component .jcl_table {
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+
+#jcl_component .searchlink {
+	font-size: 11px;
+	color: #606F79;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#jcl_component .searchlink:hover {
+	color: #8090A3;
+	text-decoration: underline;
+}
+
+#jcl_component .searchdesc {
+	font-size: 11px;
+	color: #606F79;
+}
+
+#jcl_component .jcl_month .eventtitle {
+	color: #606F79;
+        font-size: 8px;
+	text-decoration: none;
+	font-weight: bold;
+        font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .jcl_flat h3,
+#jcl_component .jcl_week h3 {
+        margin: 0px;
+        line-height: 12px;
+}
+
+#jcl_component .jcl_flat .eventtitle,
+#jcl_component .jcl_week .eventtitle {
+	color: #606F79;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        text-decoration: none;
+        font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .eventtitle:hover {
+	color: #8090A3;
+	text-decoration: underline;
+}
+
+#jcl_component .eventdesc {
+	font-size: 11px;
+	color: #606F79;
+}
+
+#jcl_component .jcl_event {
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+#jcl_component .eventdesclarge {
+	margin: 2px 0;
+	font-size: 100%;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+#jcl_component .eventdesclarge p,
+#jcl_component .jcl_event_description p {
+	font-size: 100%;
+}
+
+div.eventdescription {
+  clear: both;
+  padding-bottom: 18px;
+}
+
+#jcl_component .cattitle,#jcl_component .usertitle,#jcl_component .grouptitle
+	{
+	font-size: 11px;
+	color: #606F79;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#jcl_component .cattitle:hover,#jcl_component .usertitle:hover,#jcl_component .grouptitle:hover
+	{
+	text-decoration: underline;
+}
+
+#jcl_component .catdesc,#jcl_component .userdesc,#jcl_component .groupdesc {
+	font-size: 11px;
+	color: #606F79;
+}
+
+#jcl_component .titlehighlight {
+	color: #4488BB;
+	text-decoration: underline;
+}
+
+#jcl_component .highlight {
+	color: #80A000;
+	text-decoration: underline;
+}
+
+#jcl_component .jcl_header span.jcsearch_results, #jcl_component .jcl_header span.jcdate, #jcl_component .jcl_header span.jccat {
+	font-weight: bold;
+}
+
+#jcl_component h2.nobackground {
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#jcl_component .rightAuto {
+	float: right;
+	width: auto;
+}
+
+#jcl_component .tablec {
+	color: #333;
+	background-color: #F9F9F9;
+	padding-top: 3px;
+	padding-left: 11px;
+        padding-right: 11px;
+	padding-bottom: 3px;
+}
+
+#jcl_component .maintable {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+	width: 100%;
+	padding: 0;
+	border-spacing: 0px;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+} 
+
+#jcl_component #jcl_layout_body {
+        margin-right: 1px;
+        border-left: 1px solid #99A0AA;
+        border-right: 1px solid #99A0AA;
+}
+
+#jcl_component table.jcl_add_event {
+        width: 100%;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+}
+
+#jcl_component .jcl_center {
+    text-align: center;
+}
+
+#jcl_component table.jcl_basetable {
+        width: 100%;
+        padding: 0;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+}
+
+#jcl_component .error {
+	color: Red;
+	font-weight: bold;
+}
+
+#jcl_component .legend {
+	letter-spacing: 0.4pt;
+	font-size: 11px;
+}
+
+#jcl_component td.legend-color-borders {
+	border: 1px solid #FFFFFF;
+}
+
+/* Weekday Label Cells */
+
+#jcl_component .weekdaytopclr, #jcl_component .sundaytopclr {
+	background: #3E525E url(../images/tile.gif) repeat-x scroll center bottom;
+	border-left: 1px solid #95A5AD;
+        margin: 0px;
+        width: inherit;
+        color: #FFFFFF;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 10px;
+        font-weight: bold;
+}
+
+#jcl_component .sundaytopclr {
+}
+
+/* Day Cells */
+#jcl_component .weekdayclr {
+	color: #C0C4C8;
+	font-size: 10px;
+	background-color: #EEF0F0;
+        border-left: 1px solid #FFFFFF;
+}
+
+#jcl_component .todayclr {
+	color: #C0C4C8;
+	font-size: 10px;
+	background-color: #D0E6F6;
+    border-left: 1px solid #FFFFFF;
+}
+
+#jcl_component .sundayemptyclr {
+	color: #C0C4C8;
+	font-size: 10px;
+	background-color: #DDE0E0;
+        border-left: 1px solid #FFFFFF;
+}
+
+#jcl_component .weekdayemptyclr {
+	color: #C0C4C8;
+	font-size: 10px;
+	background-color: #E4E8E8;
+        border-left: 1px solid #FFFFFF;
+}
+
+#jcl_component .weekdayhover {
+	background-color: #CDD0D0;
+}
+
+#jcl_component .sundayhover {
+	background-color: #DDE0E0;
+}
+
+#jcl_component .todayhover {
+	background-color: #C0D6E6;
+}
+
+/* Monthly View classes */
+#jcl_component .eventstyle {
+	font-size: 9px;
+	padding: 3px;
+	border-bottom: 2px solid #555555;
+	text-align: left;
+        line-height: normal;
+}
+#jcl_component .eventstyle img {
+	margin-right: 3px;
+}
+
+#jcl_component .eventfull,
+#jcl_component .eventfullrepeat,
+#jcl_component .eventfullrepeatchild,
+#jcl_component .eventfullrepeatdetached {
+	margin-left: 3px;
+	margin-right: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-left: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	background-color: #E4E8E8;
+	cursor: auto;
+}
+
+#jcl_component .eventstart,
+#jcl_component .eventstartrepeat,
+#jcl_component .eventstartrepeatchild,
+#jcl_component .eventstartrepeatdetached {
+	margin-left: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-left: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	background-color: #DEDEDE;
+	cursor: auto;
+}
+
+#jcl_component .eventmiddle,
+#jcl_component .eventmiddlerepeat,
+#jcl_component .eventmiddlerepeatchild,
+#jcl_component .eventmiddlerepeatdetached {
+	cursor: auto;
+        margin-left: 2px;
+	margin-right: 2px;
+        margin-bottom: 5px;
+        border-top: 1px solid #D0D4D4;
+	border-left: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	background-color: #E4E8E8;
+}
+
+#jcl_component .eventend,
+#jcl_component .eventendrepeat,
+#jcl_component .eventendrepeatchild,
+#jcl_component .eventendrepeatdetached {
+	cursor: auto;
+        margin-right: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	background-color: #DEDEDE;
+}
+
+/* search form */
+#jcl_component .jcl_search_form {
+        color: #606F79;
+        font-size: 11px;
+        text-align: left;
+        padding: 8px 12px 8px 8px;
+        border-right: 1px solid #FFFFFF;
+        background-repeat: repeat-x;
+        background-position: center top;
+        background-image: url("../images/tile_back.gif");
+}
+
+#jcl_component .jcl_search_form h3 {
+        color: #606F79;
+        font-size: 9px;
+        font-weight: bold;
+        text-align: left;
+        line-height: 9px;
+        font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .jcl_search_form .inputbox {
+        color: #686868;
+        height: 12px;
+        padding-top: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 11px;
+        font-family: Verdana,Arial,Helvetica,sans-serif;
+        border-width: 1px;
+        border-style: solid;
+        border-left: 1px solid #9BAAAF;
+        border-color: #9BAAAF #9BAAAF #AABBBF;
+        background-image: url("../images/txtboxbg.gif");
+}
+
+#jcl_component .jcl_search_form_search .button {
+  border: 1px solid #AABBBF;
+  border-radius: 0 0 0 0;
+  height: 21px;
+  margin-top: -12px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
+
+#jcl_component .atomic {
+	color: #000;
+	font-size: 9px;
+	text-align: left;
+	text-shadow: none;
+}
+
+
+.jcl_event .eventtitle {
+	color: #606F79;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.jcl_event .jcl_subtitlebar h1 {
+	margin: 5px 0px;
+	color: #606F79;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.jcl_event .jcal_categories {
+	border: none !important;
+}
+
+.jcl_event .jcl_row {
+	margin: 0px 1px 0px 0px !important;
+}
+
+#jcl_component .atomic span.label {
+	float: left;
+	color: #000;
+	font-size: 9px;
+	font-weight: bold;
+	border: none;
+	background: none;
+	text-shadow: none;
+	line-height: normal;
+	padding: 0px 2px 0px;
+}
+
+#jcl_component .atomic-custom ul {
+	padding-left: 25px;
+	clear: left;
+}
+
+#jcl_component .powered_by {
+  color: #CCCCCC;
+  text-align: center;
+  padding: 5px 0px 3px;
+}
+
+#jcl_component .jcl_subtitlebar {
+	color: #606F79;
+	font-size: 9px;
+	height: 26px;
+	line-height: 26px;
+	margin-right: 1px;
+ 	padding-top: 8px;
+	padding-right: 12px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	font-weight: bold;
+    border-top: 1px solid #99A0AA;
+    border-bottom: 1px solid #CED2D6;
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-image: url("../images/tile_back.gif");
+}
+
+#jcl_component .jcl_month .jcl_header {
+	background: #3E525E url(../images/tile.gif) repeat-x scroll center bottom;
+	border-left: 1px solid #4F6A79;
+	border-right: 0px solid #4F6A79;
+	margin: 0px;
+	color: #FFFFFF;
+	padding-top: 6px;
+	padding-right: 12px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+}
+
+#jcl_component .jcl_week .jcl_header,
+#jcl_component .jcl_flat .jcl_header {
+        margin: 0;
+        padding: 6px 12px;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        border-left: 1px solid #95A5AD;
+        border-right: 0 solid #62727A;
+        background: url("../images/tile_sub.gif") repeat-x scroll center bottom #708088;
+}
+
+#jcl_component .jcl_categories .jcl_header {
+        margin: 0;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        padding: 6px 12px;
+        border-left: 1px solid #95A5AD;
+        border-right: 0 solid #62727A;
+        background: url("../images/tile_sub.gif") repeat-x scroll center bottom #708088;
+}
+
+#jcl_component .jcl_categories tr.jcl_header th {
+        padding: 0px;
+}
+
+#jcl_component .jcl_categories .jcl_row td {
+        border-top: 2px solid #FFFFFF;
+        border-right: 1px solid #FFFFFF;
+        border-bottom: 5px solid #FFFFFF;
+        
+}
+
+#jcl_component .jcl_categories .jcl_row h3 {
+        margin: 0px;
+        line-height: 12px;
+}
+
+#jcl_component .jcl_categories .jcl_row .eventtitle {
+        color: #606F79;
+        font-size: 11px;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .jcl_categories .jcl_row .jcl_event_description {
+        padding: 0;
+        color: #606F79;
+        font-size: 10px;
+        font-weight: normal;
+        font-family: Georgia,"Times New Roman",Times,Serif;   
+}
+
+
+
+/* forms */
+#jcl_component .jcl_form_label {
+	width: 160px;
+	padding: 6px 11px;
+}
+
+#jcl_component div.jcl_form_element {
+	padding: 6px 11px;
+}
+
+#jcl_component .jcl_form_element {
+	border-left: 1px solid white;
+}
+
+/* categories legend */
+#jcl_component .jcal_categories {
+	color: #000000;
+        padding: 3px 10px;
+        margin-right: 1px;
+        background-color: #D8E0E4;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 2px solid #99A0AA;
+}
+
+#jcl_component .jcal_categories h3 {
+    height: 0px;
+    display: none;
+}
+
+#jcl_component .jcal_category {
+	width: auto;
+        margin-right: 25px;
+        margin-bottom: 0px;
+}
+#jcl_component .jcal_category .jcal_category_color {
+	width: 25px;
+}
+
+#jcl_component .jcal_category .jcal_category_title {
+        color: #606F79;
+        font-size: 11px;
+        font-weight: bold;
+        font-style: normal;
+        text-decoration: none;
+        letter-spacing: 0.4pt;
+        text-decoration: none;
+}
+
+#jcl_component .jcal_category .jcal_category_title a {
+        color: #606F79;
+}
+
+#jcl_component .jcl_event_body h2 {
+	font-size: 1.1em;
+}
