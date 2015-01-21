@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension version="2.5" type="file" group="jcalpro" method="upgrade">
-    <name>FILES_JCALTHEME_INSPIRED</name>
+    <name>FILES_JCALTHEME_CLASSIC</name>
     <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
     <author>Anything Digital</author>
     <authorUrl>http://anything-digital.com</authorUrl>
     <creationDate>03/12/2012</creationDate>
     <copyright>2012 Anything Digital</copyright>
     <version>0.7.0.4074</version>
-    <description>FILES_JCALTHEME_INSPIRED_XML_DESCRIPTION</description>
+    <description>FILES_JCALTHEME_CLASSIC_XML_DESCRIPTION</description>
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.files_jcaltheme_classic.sys.ini</language>
     </languages>
@@ -19,10 +19,18 @@
         </files>
         <files folder="html/event" target="components/com_jcalpro/views/event/tmpl">
             <filename>edit_classic.php</filename>
-            <filename>classic_event.php</filename>
         </files>
         <files folder="html/registration" target="components/com_jcalpro/views/registration/tmpl">
             <filename>edit_classic.php</filename>
+        </files>
+        <files folder="html/forms" target="administrator/components/com_jcalpro/models/forms">
+            <filename>event.xml</filename>
+        </files>
+        <files folder="html/fields" target="administrator/components/com_jcalpro/models/fields">
+            <filename>jcaldatetime.php</filename>
+        </files>
+        <files folder="html/fields" target="administrator/components/com_jcalpro/models/fields/modal">
+            <filename>jcalcategory.php</filename>
         </files>
     </fileset>
     <config>
