@@ -6,7 +6,7 @@
     <authorUrl>http://anything-digital.com</authorUrl>
     <creationDate>03/12/2012</creationDate>
     <copyright>2012 Anything Digital</copyright>
-    <version>0.7.0.4074</version>
+    <version>3.2.18.4074</version>
     <description>FILES_JCALTHEME_CLASSIC_XML_DESCRIPTION</description>
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.files_jcaltheme_classic.sys.ini</language>
@@ -14,14 +14,21 @@
     <fileset>
         <files target="media/jcalpro/themes/classic">
             <folder>css</folder>
+            <folder>images</folder>
             <folder>modules</folder>
             <filename>index.html</filename>
         </files>
         <files folder="html/event" target="components/com_jcalpro/views/event/tmpl">
+            <filename>classic_event.php</filename>
             <filename>edit_classic.php</filename>
         </files>
-        <files folder="html/registration" target="components/com_jcalpro/views/registration/tmpl">
-            <filename>edit_classic.php</filename>
+        <files folder="html/events" target="components/com_jcalpro/views/events/tmpl">
+            <filename>classic_month_body.php</filename>
+        </files>
+        <files folder="html/common" target="components/com_jcalpro/views/common/tmpl">
+            <filename>classic_filters.php</filename>
+            <filename>classic_toolbar.php</filename>
+            <filename>classic_search_form.php</filename>
         </files>
         <files folder="html/forms" target="administrator/components/com_jcalpro/models/forms">
             <filename>event.xml</filename>
@@ -36,8 +43,11 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="load_common" default="0" type="hidden" />
+                <field name="load_common" default="1" type="hidden" />
             </fieldset>
         </fields>
     </config>
+	<updateservers>
+		<server type="extension" priority="2" name="My Extension's Updates">http://example.com/extension.xml</server>
+	</updateservers>
 </extension>

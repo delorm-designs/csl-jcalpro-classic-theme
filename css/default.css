@@ -45,8 +45,7 @@ http://anything-digital.com/
   border-right: 1px solid #FFFFFF;
   color: #606F79;
   font-size: 11px;
-  height: 35px;
-  padding: 8px 10px 8px 8px;
+  padding: 8px 0;
 }
 
 #jcl_component .jcl_toolbar_catselect {
@@ -70,7 +69,7 @@ http://anything-digital.com/
 	padding-top: 20px;
 	font-size: 9px;
         font-weight: bold;
-        margin: 0 2px;
+        margin: 0 1px;
 	display: inline-block;
 	color: #606F79;
         line-height: 2.5;
@@ -605,7 +604,7 @@ div.eventdescription {
 #jcl_component .eventendrepeatchild,
 #jcl_component .eventendrepeatdetached {
 	cursor: auto;
-        margin-right: 3px;
+    margin-right: 3px;
 	border-top: 1px solid #D0D4D4;
 	border-bottom: 1px solid #FFFFFF;
 	border-right: 1px solid #FFFFFF;
@@ -615,37 +614,33 @@ div.eventdescription {
 /* search form */
 #jcl_component .jcl_search_form {
         color: #606F79;
+        padding: 8px 0;
         font-size: 11px;
         text-align: left;
-        padding: 8px 12px 8px 8px;
         border-right: 1px solid #FFFFFF;
         background-repeat: repeat-x;
         background-position: center top;
         background-image: url("../images/tile_back.gif");
 }
 
-#jcl_component .jcl_search_form h3 {
+#jcl_component .jcl_search_form label {
         color: #606F79;
-        font-size: 9px;
+        font-size: 11px;
         font-weight: bold;
         text-align: left;
         line-height: 9px;
-        font-family: Georgia,"Times New Roman",Times,Serif;
 }
 
-#jcl_component .jcl_search_form .inputbox {
+#jcl_component .jcl_search_form .form-control {
         color: #686868;
-        height: 12px;
         padding-top: 2px;
         padding-left: 3px;
         padding-right: 3px;
         font-size: 11px;
-        font-family: Verdana,Arial,Helvetica,sans-serif;
         border-width: 1px;
         border-style: solid;
         border-left: 1px solid #9BAAAF;
         border-color: #9BAAAF #9BAAAF #AABBBF;
-        background-image: url("../images/txtboxbg.gif");
 }
 
 #jcl_component .jcl_search_form_search .button {
@@ -714,7 +709,6 @@ div.eventdescription {
 	color: #606F79;
 	font-size: 9px;
 	height: 26px;
-	line-height: 26px;
 	margin-right: 1px;
  	padding-top: 8px;
 	padding-right: 12px;
