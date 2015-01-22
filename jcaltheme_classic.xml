@@ -48,6 +48,6 @@
         </fields>
     </config>
 	<updateservers>
-		<server type="extension" priority="2" name="My Extension's Updates">http://example.com/extension.xml</server>
+		<server type="extension" priority="2" name="My Extension's Updates">https://raw.githubusercontent.com/delorm-designs/csl-jcalpro-classic-theme/master/jcaltheme_classic.xml</server>
 	</updateservers>
 </extension>
