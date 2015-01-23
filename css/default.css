@@ -55,7 +55,6 @@ http://anything-digital.com/
 #jcl_component .jcl_toolbar_catselect .listbox {
   background-color: #EFEFEF;
   font-size: 12px;
-  height: 26px;
   margin: 6px 0;
 }
 
@@ -708,7 +707,6 @@ div.eventdescription {
 #jcl_component .jcl_subtitlebar {
 	color: #606F79;
 	font-size: 9px;
-	height: 26px;
 	margin-right: 1px;
  	padding-top: 8px;
 	padding-right: 12px;
@@ -827,9 +825,10 @@ div.eventdescription {
 
 #jcl_component .jcal_category {
 	width: auto;
-        margin-right: 25px;
-        margin-bottom: 0px;
+    margin-right: 25px;
+    margin-bottom: 0px;
 }
+
 #jcl_component .jcal_category .jcal_category_color {
 	width: 25px;
 }
@@ -850,4 +849,68 @@ div.eventdescription {
 
 #jcl_component .jcl_event_body h2 {
 	font-size: 1.1em;
+}
+
+.btn-toolbar {
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+.btn-toolbar button {
+    width: 100%;
+}
+
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes,
+#jform_duration_type label.hasTip,
+#jform_duration_type label.hasTooltip {
+    float: none;
+}
+
+#jcl_component .jcalradio {
+    float: none;
+}
+
+#jcl_component .duration_amount {
+    padding: 20px 0 0;
+}
+
+#jcl_component .duration_amount input {
+    width: 100% !important;
+}
+
+.duration_amount label {
+    padding-left: 5px !important;
+}
+
+#jcl_component select,
+#jcl_component textarea,
+#jcl_component input[type="text"],
+#jcl_component input[type="password"],
+#jcl_component input[type="datetime"],
+#jcl_component input[type="datetime-local"],
+#jcl_component input[type="date"],
+#jcl_component input[type="month"],
+#jcl_component input[type="time"],
+#jcl_component input[type="week"],
+#jcl_component input[type="number"],
+#jcl_component input[type="email"],
+#jcl_component input[type="url"],
+#jcl_component input[type="search"],
+#jcl_component input[type="tel"],
+#jcl_component input[type="color"],
+#jcl_component .inputbox,
+#jcl_component .form-control {
+    height: 24px !important;
+    color: #686868 !important;
+    padding-top: 2px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #9BAAAF #9BAAAF #AABBBF !important;
+    background-color: #f8fcff !important;
 }

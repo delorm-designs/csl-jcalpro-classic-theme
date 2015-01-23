@@ -38,13 +38,9 @@ $searchword = (isset($this->searchword) && !empty($this->searchword) ? $this->se
 <div class="jcl_search_form jcl_center">
 	<label for="searchword"><?php echo JText::_('COM_JCALPRO_SEARCH_CALENDAR'); ?></label>
 	<div class="jcl_search_form_search">
-		<form action="<?php echo JCalProHelperUrl::task('search.search'); ?>" method="post">
-            <div class="input-group">
-                <input type="text" class="form-control" id="searchword" name="searchword" value="<?php echo JCalProHelperFilter::escape($searchword); ?>" onfocus="if(this.value == '<?php echo JCalProHelperFilter::escape_js(JText::_('COM_JCALPRO_SEARCH_DEFAULT')); ?>') this.value='';" onblur="if(!this.value) this.value = '<?php echo JCalProHelperFilter::escape_js(JText::_('COM_JCALPRO_SEARCH_DEFAULT')); ?>';" size="25" />
-                <span class="input-group-btn">
-        			<button class="btn btn-success" type="submit"><?php echo JCalProHelperFilter::escape(JText::_('COM_JCALPRO_SEARCH_BUTTON')); ?></button>
-                </span>
-            </div>
+		<form action="<?php echo JCalProHelperUrl::task('search.search'); ?>" method="post" class="form-inline">
+            <input type="text" class="form-control" id="searchword" name="searchword" value="<?php echo JCalProHelperFilter::escape($searchword); ?>" onfocus="if(this.value == '<?php echo JCalProHelperFilter::escape_js(JText::_('COM_JCALPRO_SEARCH_DEFAULT')); ?>') this.value='';" onblur="if(!this.value) this.value = '<?php echo JCalProHelperFilter::escape_js(JText::_('COM_JCALPRO_SEARCH_DEFAULT')); ?>';" size="25" />
+            <button class="btn btn-default" type="submit"><?php echo JCalProHelperFilter::escape(JText::_('COM_JCALPRO_SEARCH_BUTTON')); ?></button>
 		</form>
 	</div>
 </div>

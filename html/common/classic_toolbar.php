@@ -1,13 +1,12 @@
 <?php
 /**
- * @version		$Id: default_toolbar.php 838 2012-11-29 19:44:22Z jeffchannell $
  * @package		JCalPro
  * @subpackage	com_jcalpro
 
-**********************************************
+ **********************************************
 JCal Pro
 Copyright (c) 2006-2012 Anything-Digital.com
-**********************************************
+ **********************************************
 JCalPro is a native Joomla! calendar component for Joomla!
 
 JCal Pro was once a fork of the existing Extcalendar component for Joomla!
@@ -24,37 +23,31 @@ the Free Software Foundation; either version 2 of the License, or
 
 This header must not be removed. Additional contributions/changes
 may be added to this header as long as no information is deleted.
-**********************************************
+ **********************************************
 Get the latest version of JCal Pro at:
 http://anything-digital.com/
-**********************************************
+ **********************************************
 
  */
 
 defined('JPATH_PLATFORM') or die;
 
-$menu = JHtml::_('jcalpro.menu', isset($this->buttons) ? $this->buttons : array());
+$menu = JHtml::_('jcalpro.menu');
 $filters = JHtml::_('jcalpro.filters');
 
 ?>
-<div class="jcl_toolbar">
-	<?php if (!empty($menu)) : ?>
-	<div class="jcl_toolbar_buttons">
-	<?php foreach ($menu as $button) : ?>
-		<a title="<?php echo JCalProHelperFilter::escape($button['name']);
-			?>" href="<?php echo JCalProHelperFilter::escape($button['href']);
-			?>" class="<?php echo JCalProHelperFilter::escape(implode(' ', $button['class']));
-			?>"<?php
-			if (!empty($button['attr']) && is_array($button['attr'])) :
-				foreach ($button['attr'] as $attribute => $value) : ?> <?php
-					echo JCalProHelperFilter::escape($attribute) . '="' . JCalProHelperFilter::escape($value) . '"';
-				endforeach;
-			endif;
-			?>><?php
-			echo JCalProHelperFilter::escape($button['title']);
-		?></a>
-	<?php endforeach; ?>
-	</div>
-	<?php endif; ?>
-	<?php if (!empty($filters)) echo $filters; ?>
+<div class="jcl_toolbar clearfix">
+    <?php if (!empty($menu)) : ?>
+        <div class="jcl_toolbar_buttons">
+            <?php
+            foreach ($menu as $button) :
+                $this->button = $button;
+                $width = 100 / count($menu);
+                echo '<div style="width: '.$width.'%; float: left;">';
+                echo $this->loadTemplate('toolbar_button');
+                echo '</div>';
+            endforeach;
+            ?>
+        </div>
+    <?php endif; ?>
 </div>

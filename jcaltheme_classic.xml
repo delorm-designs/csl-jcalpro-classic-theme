@@ -26,7 +26,6 @@
             <filename>classic_month_body.php</filename>
         </files>
         <files folder="html/common" target="components/com_jcalpro/views/common/tmpl">
-            <filename>classic_filters.php</filename>
             <filename>classic_toolbar.php</filename>
             <filename>classic_search_form.php</filename>
         </files>
