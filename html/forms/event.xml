@@ -14,7 +14,7 @@
 			type="text"
 			label="JGLOBAL_TITLE"
 			description="JFIELD_TITLE_DESC"
-			class="inputbox input-xlarge"
+			class="input-xlarge"
 			size="30"
 			required="true"
 		/>
@@ -23,7 +23,7 @@
 			type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"
-			class="inputbox input-xlarge"
+			class="input-xlarge"
 		/>
 		<field
 			name="description"
@@ -31,10 +31,9 @@
 			buttons="0"
 			label="COM_JCALPRO_EVENT_DESCRIPTION_LABEL"
 			description="COM_JCALPRO_EVENT_DESCRIPTION_DESC"
-			class="form-control"
 			filter="JComponentHelper::filterText"
 			asset_id="com_jcalpro"
-			rows="12"
+			cols="60" rows="12"
 		/>
 		
 		<field
@@ -43,7 +42,6 @@
 			extension="com_jcalpro"
 			label="COM_JCALPRO_PRIMARY_CATEGORY"
 			description="JFIELD_CATEGORY_DESC"
-			class="inputbox"
 			required="true"
 		/>
 		<field
@@ -52,7 +50,7 @@
 			extension="com_jcalpro"
 			label="COM_JCALPRO_SECONDARY_CATEGORIES"
 			description="COM_JCALPRO_SECONDARY_CATEGORIES_DESC"
-			class="form-control"
+			class="input-xlarge"
 			multiple="multiple"
 			size="8"
 		/>
@@ -61,7 +59,7 @@
 			type="language"
 			label="JFIELD_LANGUAGE_LABEL"
 			description="JFIELD_LANGUAGE_DESC"
-			class="form-control"
+			class="input-block-level"
 		>
 			<option value="*">JALL</option>
 		</field>
@@ -70,7 +68,7 @@
 			type="list"
 			label="COM_JCALPRO_PRIVATE"
 			description="COM_JCALPRO_PRIVATE_DESC"
-			class="form-control"
+			class="input-block-level"
 		>
 			<option value="0" class="jcalradio">COM_JCALPRO_PRIVATE_OPTION_PUBLIC</option>
 			<option value="1" class="jcalradio">COM_JCALPRO_PRIVATE_OPTION_PRIVATE</option>
@@ -90,14 +88,12 @@
 			type="jcaldatetime"
 			label="COM_JCALPRO_START_DATE"
 			description="COM_JCALPRO_START_DATE_DESC"
-			class="form-control"
 		/>
 		<field
 			id="timezone" name="timezone"
 			type="jcaltimezone"
 			label="COM_JCALPRO_TIMEZONE"
 			description="COM_JCALPRO_TIMEZONE"
-			class="form-control"
 			default=""
 		>
 			<option value="UTC">JLIB_FORM_VALUE_TIMEZONE_UTC</option>
@@ -130,14 +126,12 @@
 			type="jcaldatetime"
 			label="COM_JCALPRO_END_DATE"
 			description="COM_JCALPRO_END_DATE"
-			class="form-control"
 		/>
 		<field
 			id="end_days" name="end_days"
 			type="text"
 			label="COM_JCALPRO_DURATION_END_DAYS_LABEL"
 			description="COM_JCALPRO_DURATION_END_DAYS_DESC"
-			class="form-control"
 			size="3"
 			default="0"
 			filter="intval"
@@ -147,7 +141,6 @@
 			type="text"
 			label="COM_JCALPRO_DURATION_END_HOURS_LABEL"
 			description="COM_JCALPRO_DURATION_END_HOURS_DESC"
-			class="form-control"
 			size="3"
 			default="1"
 			filter="intval"
@@ -157,7 +150,6 @@
 			type="text"
 			label="COM_JCALPRO_DURATION_END_MINUTES_LABEL"
 			description="COM_JCALPRO_DURATION_END_MINUTES_DESC"
-			class="form-control"
 			size="3"
 			default="0"
 			filter="intval"
@@ -177,6 +169,7 @@
 			type="radio"
 			label="COM_JCALPRO_RECUR_TYPE_LABEL"
 			description="COM_JCALPRO_RECUR_TYPE_DESC"
+			class=""
 			default="0"
 			filter="intval"
 		>
@@ -191,7 +184,6 @@
 			type="text"
 			label="COM_JCALPRO_REC_DAILY_PERIOD_LABEL"
 			description="COM_JCALPRO_REC_DAILY_PERIOD_DESC"
-			class="form-control"
 			size="3"
 			default="1"
 			filter="intval"
@@ -201,7 +193,6 @@
 			type="text"
 			label="COM_JCALPRO_REC_WEEKLY_PERIOD_LABEL"
 			description="COM_JCALPRO_REC_WEEKLY_PERIOD_DESC"
-			class="form-control"
 			size="3"
 			default="1"
 			filter="intval"
@@ -211,7 +202,6 @@
 			type="text"
 			label="COM_JCALPRO_REC_MONTHLY_PERIOD_LABEL"
 			description="COM_JCALPRO_REC_MONTHLY_PERIOD_DESC"
-			class="form-control"
 			size="3"
 			default="1"
 			filter="intval"
@@ -221,7 +211,6 @@
 			type="text"
 			label="COM_JCALPRO_REC_YEARLY_PERIOD_LABEL"
 			description="COM_JCALPRO_REC_YEARLY_PERIOD_DESC"
-			class="form-control"
 			size="3"
 			default="1"
 			filter="intval"
@@ -230,7 +219,6 @@
 			id="rec_weekly_on_sunday" name="rec_weekly_on_sunday"
 			type="checkbox"
 			label="SUNDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -238,7 +226,6 @@
 			id="rec_weekly_on_monday" name="rec_weekly_on_monday"
 			type="checkbox"
 			label="MONDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -246,7 +233,6 @@
 			id="rec_weekly_on_tuesday" name="rec_weekly_on_tuesday"
 			type="checkbox"
 			label="TUESDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -254,7 +240,6 @@
 			id="rec_weekly_on_wednesday" name="rec_weekly_on_wednesday"
 			type="checkbox"
 			label="WEDNESDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -262,7 +247,6 @@
 			id="rec_weekly_on_thursday" name="rec_weekly_on_thursday"
 			type="checkbox"
 			label="THURSDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -270,7 +254,6 @@
 			id="rec_weekly_on_friday" name="rec_weekly_on_friday"
 			type="checkbox"
 			label="FRIDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -278,7 +261,6 @@
 			id="rec_weekly_on_saturday" name="rec_weekly_on_saturday"
 			type="checkbox"
 			label="SATURDAY"
-			class="form-control"
 			value="1"
 			filter="intval"
 		/>
@@ -287,7 +269,7 @@
 			type="text"
 			label="COM_JCALPRO_REC_MONTHLY_DAY_NUMBER_LABEL"
 			description="COM_JCALPRO_REC_MONTHLY_DAY_NUMBER_DESC"
-			class="form-control jcl_left"
+			class="jcl_left"
 			size="3"
 			default="1"
 			filter="intval"
@@ -295,8 +277,6 @@
 		<field
 			id="rec_monthly_type" name="rec_monthly_type"
 			type="radio"
-			label="COM_JCALPRO_REC_MONTHLY_TYPE_LABEL"
-			description="COM_JCALPRO_REC_MONTHLY_TYPE_DESC"
 			default=""
 		>
 			<option value="0" class="jcalradio">COM_JCALPRO_REC_MONTHLY_TYPE_OPTION_0</option>
@@ -358,7 +338,7 @@
 			type="text"
 			label="COM_JCALPRO_REC_YEARLY_DAY_NUMBER_LABEL"
 			description="COM_JCALPRO_REC_YEARLY_DAY_NUMBER_DESC"
-			class="form-control jcl_left"
+			class="jcl_left"
 			size="3"
 			default="1"
 			filter="intval"
@@ -419,7 +399,6 @@
 			type="text"
 			label="COM_JCALPRO_RECUR_END_COUNT_LABEL"
 			description="COM_JCALPRO_RECUR_END_COUNT_DESC"
-			class="form-control"
 			size="5"
 			default="2"
 			filter="intval"
@@ -429,7 +408,6 @@
 			type="calendar"
 			label="COM_JCALPRO_RECUR_END_UNTIL_LABEL"
 			description="COM_JCALPRO_RECUR_END_UNTIL_DESC"
-			class="form-control"
 			filter="JCAL"
 		/>
 	</fieldset>
@@ -444,7 +422,7 @@
 	>
 		<field
 			name="registration" id="registration"
-			type="radio" class="inputbox"
+			type="radio" 
 			label="COM_JCALPRO_REGISTRATION"
 			description="COM_JCALPRO_REGISTRATION_DESC"
 			default="0"
@@ -456,7 +434,7 @@
 		<field
 			name="registration_capacity"
 			id="registration_capacity"
-			type="text" class="inputbox"
+			type="text" 
 			label="COM_JCALPRO_REGISTRATION_CAPACITY"
 			description="COM_JCALPRO_REGISTRATION_CAPACITY_DESC"
 			default="0" size="5"
@@ -467,11 +445,10 @@
 			type="jcaldatetime"
 			label="COM_JCALPRO_REGISTRATION_START_DATE"
 			description="COM_JCALPRO_REGISTRATION_START_DATE_DESC"
-			class="inputbox"
 		/>
 		<field
 			name="registration_until_event" id="registration_until_event"
-			type="radio" class="inputbox"
+			type="radio" 
 			label="COM_JCALPRO_REGISTRATION_UNTIL_EVENT"
 			description="COM_JCALPRO_REGISTRATION_UNTIL_EVENT_DESC"
 			default="1"
@@ -485,7 +462,7 @@
 			type="jcaldatetime"
 			label="COM_JCALPRO_REGISTRATION_END_DATE"
 			description="COM_JCALPRO_REGISTRATION_END_DATE_DESC"
-			class="inputbox"
+			
 		/>
 	</fieldset>
 	<!--
@@ -502,14 +479,14 @@
 			type="jcalpublished"
 			label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC"
-			class="inputbox input-block-level"
+			class="input-block-level"
 			filter="intval"
 			size="1"
 			default="1"
 		/>
 		<field
 			name="approved" id="approved"
-			type="list" class="inputbox input-block-level"
+			type="list" class="input-block-level"
 			label="COM_JCALPRO_APPROVED"
 			description="COM_JCALPRO_APPROVED_DESC"
 			default="1"
@@ -520,7 +497,7 @@
 		</field>
 		<field
 			name="featured" id="featured"
-			type="list" class="inputbox input-block-level"
+			type="list" class="input-block-level"
 			label="COM_JCALPRO_FEATURED"
 			description="COM_JCALPRO_FEATURED_DESC"
 			default="0"
@@ -542,7 +519,6 @@
 		<field
 			id="id" name="id"
 			type="hidden"
-			class="inputbox"
 			label="COM_JCALPRO_ID_LABEL"
 			default="0"
 			readonly="true"
@@ -556,7 +532,6 @@
 		<field
 			id="rec_id" name="rec_id"
 			type="hidden"
-			class="inputbox"
 			label="COM_JCALPRO_REC_ID_LABEL"
 			default="0"
 			readonly="true"
@@ -564,7 +539,6 @@
 		<field
 			id="created_by" name="created_by"
 			type="hidden"
-			class="inputbox"
 			label="COM_JCALPRO_OWNER_ID_LABEL"
 			default="0"
 			readonly="true"
@@ -572,7 +546,6 @@
 		<field
 			id="detached_from_rec" name="detached_from_rec"
 			type="hidden"
-			class="inputbox"
 			label="COM_JCALPRO_DETACHED_FROM_REC_LABEL"
 			default="0"
 			readonly="true"
@@ -580,7 +553,6 @@
 		<field
 			id="previous_recur_type" name="previous_recur_type"
 			type="hidden"
-			class="inputbox"
 			label="COM_JCALPRO_PREVIOUS_RECUR_TYPE_LABEL"
 			default="0"
 			readonly="true"
@@ -607,7 +579,7 @@
 		>
 			<field name="tags" type="tag"
 				label="JTAG" description="JTAG_DESC"
-				class="form-control" multiple="true"
+				multiple="true"
 			/>
 		</fieldset>
 	</fields>

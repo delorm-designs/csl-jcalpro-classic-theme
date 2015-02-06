@@ -15,7 +15,6 @@
         <files target="media/jcalpro/themes/classic">
             <folder>css</folder>
             <folder>images</folder>
-            <folder>modules</folder>
             <filename>index.html</filename>
         </files>
         <files folder="html/event" target="components/com_jcalpro/views/event/tmpl">
@@ -31,12 +30,6 @@
         </files>
         <files folder="html/forms" target="administrator/components/com_jcalpro/models/forms">
             <filename>event.xml</filename>
-        </files>
-        <files folder="html/fields" target="administrator/components/com_jcalpro/models/fields">
-            <filename>jcaldatetime.php</filename>
-        </files>
-        <files folder="html/fields" target="administrator/components/com_jcalpro/models/fields/modal">
-            <filename>jcalcategory.php</filename>
         </files>
     </fileset>
     <config>
