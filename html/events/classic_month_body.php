@@ -123,11 +123,16 @@ $archive        = JCalPro::config('archive');
 									if ($this->tpl) :
 										echo $title;
 									else :
-										?><a href="#" <?php 
+										?><a href="#" <?php
+                                        if (strpos($event->href, "?") === false) {
+                                            $event->href .= '?tmpl=component';
+                                        } else {
+                                            $event->href .= '&tmpl=component';
+                                        }
 										if ($this->show_description) :
-											?> class="eventtitle" title="" onclick="SqueezeBox.fromElement('<?php echo JRoute::_($event->href); ?>?tmpl=component', {size:{x:700,y:555}, handler:'iframe'});"><?php
+											?> class="eventtitle" title="" onclick="SqueezeBox.fromElement('<?php echo JRoute::_($event->href); ?>', {size:{x:700,y:555}, handler:'iframe'});"><?php
 										else :
-											?> class="eventtitle" title="" onclick="SqueezeBox.fromElement('<?php echo JRoute::_($event->href); ?>?tmpl=component', {size:{x:700,y:555}, handler:'iframe'});"><?php
+											?> class="eventtitle" title="" onclick="SqueezeBox.fromElement('<?php echo JRoute::_($event->href); ?>', {size:{x:700,y:555}, handler:'iframe'});"><?php
 										endif;
 										echo $title; ?></a><?php
 									endif;
