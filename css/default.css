@@ -1168,6 +1168,7 @@ div.eventdescription {
     margin-bottom: 10px !important;
 }
 
+
 #jform_cat-lbl,
 #jform_language-lbl,
 #jform_canonical-lbl {
@@ -1181,7 +1182,7 @@ div.eventdescription {
     width: 100% !important;
 }
 
-#jform_cat {
+#jcl_component select#jform_cat {
     width: 100% !important;
     height: 120px !important;
 }
@@ -1217,8 +1218,9 @@ div.eventdescription {
     width: 100% !important;
 }
 
-#jform_metadata_tags_chzn input {
+#jform_metadata_tags_chzn input[type="text"] {
     padding: 0 5px !important;
+    margin-bottom: 0 !important;
 }
 
 #jform_metadata_tags_chzn li.search-choice {
@@ -1226,23 +1228,21 @@ div.eventdescription {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 #jcl_component ul,
 #jcl_component ol {
-    margin: 0 0 10px 25px;
     padding: 0;
+    margin: 0 0 10px 25px;
 }
 
+#jcl_component .jcal_fieldsets {
+    margin-top: 15px;
+}
+
+#jcl_component .chzn-container ul,
+#jcl_component .jcal_fieldsets ul {
+    margin-left: 0;
+    margin-bottom: 0;
+}
 
 
 #jcl_component label[for="jform_rec_monthly_type1"] {
@@ -1268,15 +1268,15 @@ div.eventdescription {
 
 .radio label,
 .checkbox label {
-    padding-left: 5px;
+    padding-left: 5px !important;
 }
 
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-    margin-left: -20px;
-    position: inherit;
+    margin-left: 0 !important;
+    position: inherit !important;
 
 }
 
