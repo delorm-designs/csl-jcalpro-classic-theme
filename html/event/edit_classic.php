@@ -35,6 +35,8 @@ defined('JPATH_PLATFORM') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
+JHtml::stylesheet(JCalProHelperUrl::media() . '/themes/classic/css/default.css');
+
 
 JText::script('COM_JCALPRO_VALIDATION_FORM_FAILED');
 JText::script('COM_JCALPRO_VALIDATION_JFORM_TITLE_FAILED');
@@ -57,6 +59,7 @@ $canCreatePrivate = JCalPro::canDo('core.create.private', $canonical);
 $canCreatePublic  = JCalPro::canDo('core.create', $canonical);
 $canModerate      = JCalPro::canDo('core.moderate', $canonical);
 $canEditState     = JCalPro::canDo('core.edit.state', $canonical);
+
 ?>
     <script type="text/javascript">
         window.jclAcl = {
