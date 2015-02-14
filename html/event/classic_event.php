@@ -43,6 +43,8 @@ $context = 'com_jcalpro.category.' . $event->categories->canonical->id;
 $task    = 'event-task-' . $event->id;
 $form    = 'event-form-' . $event->id;
 $isMine  = ($user->id == $event->created_by && $event->private);
+
+JHtml::stylesheet('media/jcalpro/themes/classic/default.css', array(), true);
 ?>
 <div class="jcl_subtitlebar">
 	<div class="jcl_left"><h1><?php echo JCalProHelperFilter::escape($this->item->title); ?></h1></div>
