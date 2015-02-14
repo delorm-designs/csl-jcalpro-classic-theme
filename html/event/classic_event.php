@@ -36,10 +36,63 @@ defined('JPATH_PLATFORM') or die;
 $this->event = $this->item;
 $this->document->addStyleSheet(JCalProHelperUrl::media() . '/themes/classic/css/default.css');
 
+$event   = $this->event;
+$user    = JFactory::getUser();
+$script  = 'document.getElementById(\'%s\').value=\'%s\';document.getElementById(\'%s\').submit();';
+$context = 'com_jcalpro.category.' . $event->categories->canonical->id;
+$task    = 'event-task-' . $event->id;
+$form    = 'event-form-' . $event->id;
+$isMine  = ($user->id == $event->created_by && $event->private);
 ?>
 <div class="jcl_subtitlebar">
 	<div class="jcl_left"><h1><?php echo JCalProHelperFilter::escape($this->item->title); ?></h1></div>
-	<div class="jcl_right"><?php echo $this->loadTemplate('event_admin'); ?></div>
+	<div class="jcl_right">
+        <form id="<?php echo $form; ?>" method="post" action="<?php echo JCalProHelperUrl::_(); ?>"><?php
+
+            if ($user->authorise('core.edit', $context) || $user->authorise('core.edit.own', $context) || $isMine) {
+                echo JHtml::_('jcalpro.image', 'icon-edit.png', $this->template, array(
+                    'title' => JText::_('COM_JCALPRO_EVENT_EDIT_TOOLTIP')
+                ,	'onclick' => 'window.location.href=\'' . JCalProHelperUrl::task('event.edit', true, array('id'=>$event->id, 'tmpl' => 'component')) . '\';'
+                ,	'style' => 'cursor:pointer;'
+                ,	'class' => 'hasTip hasTooltip'
+                ));
+            }
+
+            if (0 == $event->approved && $user->authorise('core.moderate', $context)) {
+                echo JHtml::_('jcalpro.image', 'icon-approve.png', $this->template, array(
+                    'title' => JText::_('COM_JCALPRO_EVENT_APPROVE_TOOLTIP')
+                ,	'onclick' => sprintf($script, $task, 'events.approve', $form)
+                ,	'style' => 'cursor:pointer;'
+                ,	'class' => 'hasTip hasTooltip'
+                ));
+            }
+
+            if (0 == $event->published && $user->authorise('core.edit.state', $context)) {
+                echo JHtml::_('jcalpro.image', 'icon-publish.png', $this->template, array(
+                    'title' => JText::_('COM_JCALPRO_EVENT_PUBLISH_TOOLTIP')
+                ,	'onclick' => sprintf($script, $task, 'events.publish', $form)
+                ,	'style' => 'cursor:pointer;'
+                ,	'class' => 'hasTip hasTooltip'
+                ));
+            }
+
+            if ($user->authorise('core.delete', $context) || $isMine) {
+                echo JHtml::_('jcalpro.image', 'icon-delete.png', $this->template, array(
+                    'title' => JText::_('COM_JCALPRO_EVENT_DELETE_TOOLTIP')
+                ,	'onclick' => 'if(confirm(\'' . JText::_('COM_JCALPRO_EVENT_DELETE_CONFIRM') . '\')){'.sprintf($script, $task, 'events.trash', $form).'}'
+                ,	'style' => 'cursor:pointer;'
+                ,	'class' => 'hasTip hasTooltip'
+                ));
+            }
+            ?>
+            <div style="display:none;">
+                <input name="cid[]" value="<?php echo $event->id; ?>" />
+                <input name="id" value="<?php echo $event->id; ?>" />
+                <input name="task" id="event-task-<?php echo $event->id; ?>" value="" />
+                <?php echo JHtml::_('form.token'); ?>
+            </div>
+        </form>
+    </div>
 	<div class="jcl_clear"><!--  --></div>
 </div>
 <div class="jcl_clear"><!--  --></div>
