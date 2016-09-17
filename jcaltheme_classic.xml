@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="file" group="jcalpro" method="upgrade">
+    <name>FILES_JCALTHEME_CLASSIC</name>
+    <author>de Lorm Designs</author>
+    <authorUrl>http://www.delormdesigns.com/</authorUrl>
+    <creationDate>September 10 2016</creationDate>
+    <version>3.0.0</version>
+    <description>FILES_JCALTHEME_CLASSIC_XML_DESCRIPTION</description>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.files_jcaltheme_classic.sys.ini</language>
+    </languages>
+    <fileset>
+        <files target="media/jcalpro/themes/classic">
+            <folder>css</folder>
+            <folder>images</folder>
+            <folder>modules</folder>
+            <filename>index.html</filename>
+        </files>
+        <files folder="html/event" target="components/com_jcalpro/views/event/tmpl">
+            <filename>classic_event.php</filename>
+            <filename>edit_classic.php</filename>
+        </files>
+        <files folder="html/events" target="components/com_jcalpro/views/events/tmpl">
+            <filename>classic_month_body.php</filename>
+        </files>
+        <files folder="html/common" target="components/com_jcalpro/views/common/tmpl">
+            <filename>classic_toolbar.php</filename>
+            <filename>classic_search_form.php</filename>
+        </files>
+        <files folder="html/forms" target="administrator/components/com_jcalpro/models/forms">
+            <filename>event.xml</filename>
+        </files>
+    </fileset>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="load_common" default="1" type="hidden" />
+            </fieldset>
+        </fields>
+    </config>
+	<updateservers>
+		<server type="extension" name="JCalPro Theme - Classic">https://raw.githubusercontent.com/delorm-designs/files_jcalthemes_classic/3.x/manifest.xml</server>
+	</updateservers>
+</extension>
