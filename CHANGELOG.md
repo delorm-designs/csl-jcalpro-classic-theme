@@ -1,6 +1,11 @@
-# Change Log
+## JCALPro Classic Theme for CSL
 
-##9/12/2016
+##Change Log
+All notable changes to this project will be documented in this file.
 
-  - Initial 3.04 release
+##[3.0.0] - 2016-9-12
+  - Initial 3.0.0 release
   - Added Bootstrap 3 column support
+
+##[3.0.1] - 2016-9-18
+  - Fixes in calendar search bar display
