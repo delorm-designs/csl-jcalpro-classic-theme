@@ -1325,3 +1325,103 @@ div.eventdescription {
 
 
 
+
+
+
+
+
+
+
+/* categories legend */
+#jcl_component .jcal_categories {
+    color: #000000;
+    padding: 3px 10px;
+    margin-right: 1px;
+    background-color: #D8E0E4;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 2px solid #99A0AA;
+}
+
+#jcl_component .jcal_categories h3 {
+    height: 0px;
+    display: none;
+}
+
+#jcl_component .jcal_category {
+    width: auto;
+    margin-right: 25px;
+    margin-bottom: 0px;
+}
+#jcl_component .jcal_category .jcal_category_color {
+    width: 25px;
+}
+
+#jcl_component .jcal_category .jcal_category_title {
+    color: #606F79;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 0.4pt;
+    text-decoration: none;
+}
+
+#jcl_component .jcal_category .jcal_category_title a {
+    color: #606F79;
+}
+
+#jcl_component .jcl_event_body h2 {
+    font-size: 1.1em;
+}
+
+
+
+
+/* search form */
+#jcl_component .jcl_search_form {
+    height: 68px;
+    color: #606F79;
+    font-size: 11px;
+    text-align: left;
+    padding: 8px 12px 8px 8px;
+    border-right: 1px solid #FFFFFF;
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-image: url("../images/tile_back.gif");
+}
+
+#jcl_component .jcl_search_form h3 {
+    color: #606F79;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 9px;
+    font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+#jcl_component .jcl_search_form input {
+    color: #686868;
+    float: left;
+    width: 85% !important;
+    height: 32px;
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 11px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    border-width: 1px;
+    border-style: solid;
+    border-left: 1px solid #9BAAAF;
+    border-color: #9BAAAF #9BAAAF #AABBBF;
+    background-color: #FFFFFF;
+}
+
+#jcl_component .jcl_search_form button {
+    width: 14%;
+    float: right;
+    height: 30px;
+    font-size: 11px;
+    border-radius: 0 0 0 0;
+    border: 1px solid #AABBBF;
+    background-color: #F0F0F0;
+}
