@@ -9,3 +9,6 @@ All notable changes to this project will be documented in this file.
 
 ##[3.0.1] - 2016-9-18
   - Fixes in calendar search bar display
+  
+##[3.0.2] - 2017-3-10
+  - Updated installer to move files to media/com_jcalpro versus media/jcalpro
