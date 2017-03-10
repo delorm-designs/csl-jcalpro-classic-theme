@@ -3,14 +3,14 @@
     <name>FILES_JCALTHEME_CLASSIC</name>
     <author>de Lorm Designs</author>
     <authorUrl>http://www.delormdesigns.com/</authorUrl>
-    <creationDate>September 10 2016</creationDate>
-    <version>3.0.1</version>
+    <creationDate>March 3 2017</creationDate>
+    <version>3.0.2</version>
     <description>FILES_JCALTHEME_CLASSIC_XML_DESCRIPTION</description>
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.files_jcaltheme_classic.sys.ini</language>
     </languages>
     <fileset>
-        <files target="media/jcalpro/themes/classic">
+        <files target="media/com_jcalpro/themes/classic">
             <folder>css</folder>
             <folder>images</folder>
             <folder>modules</folder>
