@@ -12,3 +12,6 @@ All notable changes to this project will be documented in this file.
   
 ##[3.0.2] - 2017-3-10
   - Updated installer to move files to media/com_jcalpro versus media/jcalpro
+  
+##[3.0.3] - 2018-2-18
+- Changed JCalPro::canAddEvents() to JCalProHelperAccess::canAddEvents() in JCALPro over-rides.

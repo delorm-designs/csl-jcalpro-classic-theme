@@ -88,7 +88,7 @@ $archive        = JCalPro::config('archive');
 							<div class="jcl_month_add jcl_right">
 								<?php
 								// check if user is allowed to create events
-								if (JCalPro::canAddEvents() && !$this->tpl && (!$archive || ($archive && $stack['user_datetime'] >= $this->dates->today))) :
+								if (JCalProHelperAccess::canAddEvents() && !$this->tpl && (!$archive || ($archive && $stack['user_datetime'] >= $this->dates->today))) :
 									echo JHtml::_('jcalpro.addlink', JHtml::_('jcalpro.image', 'addsign.gif', $this->template, array(
 										'name'   => "add$cell_day"
 									,	'alt'    => JCalProHelperFilter::escape(JText::sprintf('COM_JCALPRO_ADD_NEW_EVENT_ON', $stack['user_datetime']->format(JText::_('COM_JCALPRO_DATE_FORMAT_FULL_DATE'))))
