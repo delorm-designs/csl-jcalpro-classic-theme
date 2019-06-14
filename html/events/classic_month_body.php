@@ -118,7 +118,7 @@ $archive        = JCalPro::config('archive');
 									
 									$description = $event->description;
 									if ($this->description_limit) $description = JCalProHelperFilter::truncate($description, $this->description_limit);
-									$description = JCalProHelperFilter::escape(strip_tags(JCalProHelperFilter::purify($description)));
+									$description = JCalProHelperFilter::escape(strip_tags($description));
 				
 									if ($this->tpl) :
 										echo $title;
