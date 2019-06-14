@@ -3,8 +3,8 @@
     <name>FILES_JCALTHEME_CLASSIC</name>
     <author>de Lorm Designs</author>
     <authorUrl>http://www.delormdesigns.com/</authorUrl>
-    <creationDate>July 12 2018</creationDate>
-    <version>3.0.3</version>
+    <creationDate>June 13 2018</creationDate>
+    <version>3.0.4</version>
     <description>FILES_JCALTHEME_CLASSIC_XML_DESCRIPTION</description>
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.files_jcaltheme_classic.sys.ini</language>
