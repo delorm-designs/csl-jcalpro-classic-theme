@@ -15,3 +15,6 @@ All notable changes to this project will be documented in this file.
   
 ##[3.0.3] - 2018-2-18
 - Changed JCalPro::canAddEvents() to JCalProHelperAccess::canAddEvents() in JCALPro over-rides.
+
+##[3.0.4] - 2019-6-13
+- Removed invalid function call to JCalProHelperFilter::purify() in JCALPro over-rides.
