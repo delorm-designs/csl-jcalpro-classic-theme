@@ -3,7 +3,7 @@
         <name><![CDATA[JCalPro Theme - Classic]]></name>
         <description><![CDATA[JCalPro Theme - Classic]]></description>
         <element>files_jcalthemes_classic</element>
-        <type>theme</type>
+        <type>template</type>
         <client>0</client>
         <version>3.0.4</version>
         <infourl title="de Lorm Designs">http://www.delormdesigns.com/</infourl>
